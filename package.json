@@ -7,7 +7,12 @@
   },
   "dependencies": {
     "ejs": "~1.0.0",
-    "express": "~4.9.8"
-  }
+    "express": "~4.9.8",
+    "firebase": "^3.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Tuxito/heroku-node.git"
+  },
+  "license": "UNLICENSED"
 }
-

@@ -3,17 +3,14 @@ var app = express();
 
 /* ------------------------------------------------------------------------------------------ */
 
-var firebase = require('firebase-admin');
+var firebase = require('firebase');
 var request = require('request');
 
 var API_KEY = "AIzaSyDDlahLHMSVEifJm6rblDKHvHX-DueZgwg"; // Your Firebase Cloud Messaging Server API key
 
-// Fetch the service account key JSON file contents
-var serviceAccount = require("panarrap.json");
-
 // Initialize the app with a service account, granting admin privileges
 firebase.initializeApp({
-  credential: firebase.credential.cert(serviceAccount),
+  serviceAccount: "panarrap.json",
   databaseURL: "https://testmaterial-d82a5.firebaseio.com/"
 });
 ref = firebase.database().ref();

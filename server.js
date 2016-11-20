@@ -18,6 +18,7 @@ ref = firebase.database().ref();
 function listenForNotificationRequests() {
   var requests = ref.child('notificationRequests');
   ref.on('child_added', function(requestSnapshot) {
+	  console.log('New notification created');
     var request = requestSnapshot.val();
     sendNotificationToUser(
       request.username, 
